@@ -1,0 +1,17 @@
+# Open DNS Resolvers list (template)
+# Format: one IP[:PORT] per line (default port 53)
+#
+# This repo ships an empty template on purpose: build your own list for
+# infrastructure you are authorized to test. Two common ways:
+#
+# 1. censys CLI
+#    pip install censys
+#    censys search 'services: (port: 53 and dns.server_type="RECURSIVE_RESOLVER")' \
+#        --index-type hosts -o dns_resolvers.json
+#
+# 2. Your own lab resolvers (unbound/bind/docker) - point entries at them.
+#
+# Amplification factors to expect (measure on your own lab):
+#   paypal.com TXT   -> ~1131 bytes (~28x)
+#   google.com TXT   ->  ~886 bytes (~22x)
+#   facebook.com TXT ->  476 bytes (~12x)

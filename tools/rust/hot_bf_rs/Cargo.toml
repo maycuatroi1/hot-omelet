@@ -1,0 +1,19 @@
+[package]
+name = "hot-bf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+tokio-postgres = { version = "0.7", features = ["runtime"] }
+reqwest = { version = "0.12", features = ["cookies"] }
+clap = { version = "4", features = ["derive"] }
+colored = "2"
+crossterm = "0.28"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"

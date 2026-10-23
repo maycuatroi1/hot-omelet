@@ -1,0 +1,77 @@
+# Python
+**/__pycache__/
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Secrets / credentials (never commit)
+.env
+.env.*
+cookie-*.txt
+fetch-*.txt
+*.cookie
+*.pem
+*.key
+
+# Engagement output (local only, never commit)
+reports/
+workers/
+recon/
+mass_pwn_results/
+cve/
+0-day/
+apk_analysis/
+ssrf_scan_results/
+ssrf_exploitation/
+
+# Raw scan output
+httpx_*.txt
+gau_*.txt
+*_ips.txt
+*_targets.txt
+*_subdomains.txt
+subdomains_*.txt
+nmap_*.txt
+ffuf_*.json
+
+# Rust
+*/target/
+tools/rust/*/target/
+
+# Large binaries / artifacts
+*.apk
+*.xapk
+*.ipa
+*.exe
+*.dll
+*.so
+*.dylib
+*.jar
+*.zip
+*.7z
+*.tar
+*.gz
+*.rar
+*.iso
+*.img
+*.whl
+
+# Media
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp3
+*.mp4
+*.pdf
+
+# OS / editor
+.DS_Store
+.idea/
+*.swp
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
